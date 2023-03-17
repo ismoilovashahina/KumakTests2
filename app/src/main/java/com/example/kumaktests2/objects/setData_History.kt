@@ -26,7 +26,7 @@ object setData_History {
             "4",
             "8",
             "2",
-            "6",
+            "7",
             2
         )
         var q4=Question_Data(

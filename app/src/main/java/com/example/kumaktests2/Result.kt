@@ -1,8 +1,10 @@
 package com.example.kumaktests2
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.example.kumaktests2.datas.User
 import com.example.kumaktests2.objects.setData
 import com.example.kumaktests2.objects.setData_Science
@@ -12,6 +14,7 @@ import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_result.*
 
 class Result : AppCompatActivity() {
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
@@ -21,7 +24,7 @@ class Result : AppCompatActivity() {
         var gson = Gson()
         var userList = mutableListOf<User>()
         var type = object : TypeToken<List<User>>() {}.type
-        val user_name=intent.getStringExtra(setData.name)
+        val username=intent.getStringExtra(setData.name)
 
         val score=intent.getStringExtra(setData.score)
         val totalQuestion=intent.getStringExtra("total size")
@@ -31,8 +34,9 @@ class Result : AppCompatActivity() {
 
 
 
-        congratulation_text.text="Congratulations ${user_name} !!"
-        Score.text="${score} / ${totalQuestion}"
+        congratulation_text.text="Congratulations $username !!"
+        Log.d("TAG","userName")
+        Score.text="$score / $totalQuestion"
         for(i in userList){
             if(users_score_name==i.name && users_score_password==i.passwpord){
                 i.score=score.toString().toInt()
@@ -43,8 +47,11 @@ class Result : AppCompatActivity() {
             finish()
         }
         b.setOnClickListener {
-            var intent= Intent(this, Login::class.java)
+            val intent= Intent(this, Login::class.java)
             startActivity(intent)
         }
     }
 }
+
+
+

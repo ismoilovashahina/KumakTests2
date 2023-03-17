@@ -89,7 +89,7 @@
             android:textSize="18sp"
             android:text="option_1"
             android:textColor="@color/theme_color"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="150dp"
             android:padding="10dp"
             android:gravity="center"
             android:background="@drawable/question_option"/>
@@ -101,7 +101,7 @@
             android:textSize="18sp"
             android:text="option_1"
             android:textColor="@color/theme_color"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="220dp"
             android:padding="10dp"
             android:gravity="center"
             android:background="@drawable/question_option"/>
@@ -113,7 +113,7 @@
             android:textSize="18sp"
             android:text="option_1"
             android:textColor="@color/theme_color"
-            android:layout_marginTop="220dp"
+            android:layout_marginTop="290dp"
             android:padding="10dp"
             android:gravity="center"
             android:background="@drawable/question_option"/>
@@ -125,7 +125,7 @@
             android:textSize="18sp"
             android:text="option_1"
             android:textColor="@color/theme_color"
-            android:layout_marginTop="290dp"
+            android:layout_marginTop="360dp"
             android:padding="10dp"
             android:gravity="center"
             android:background="@drawable/question_option"/>
@@ -133,7 +133,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="410dp">
+            android:layout_marginTop="450dp">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/submit"

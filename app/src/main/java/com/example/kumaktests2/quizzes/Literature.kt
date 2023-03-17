@@ -68,7 +68,7 @@ class Literature : AppCompatActivity() {
                         setQuestion()
                     }
                     else->{
-                        var intent= Intent(this,Result::class.java)
+                        var intent= Intent(this,com.example.kumaktests2.Result::class.java)
                         intent.putExtra(setData_Literature.name, Name.toString())
                         intent.putExtra(setData_Literature.score, score.toString())
                         intent.putExtra("total size",questionList!!.size.toString())

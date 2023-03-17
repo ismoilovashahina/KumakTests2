@@ -68,7 +68,7 @@ class Geography : AppCompatActivity() {
                         setQuestion()
                     }
                     else->{
-                        var intent= Intent(this,Result::class.java)
+                        var intent= Intent(this,com.example.kumaktests2.Result::class.java)
                         intent.putExtra(setData.name, Name.toString())
                         intent.putExtra(setData.score, score.toString())
                         intent.putExtra("total size",questionList!!.size.toString())
